@@ -1,4 +1,5 @@
 import axios from "axios";
+import { setError } from "./error";
 
 export const GET_ARTICLES = "GET_ARTICLES";
 
@@ -19,7 +20,8 @@ export function fetchArticles() {
       const action = fetchedArticles(articles);
       dispatch(action);
     } catch (error) {
-      console.log(error);
+      console.error(error);
+      dispatch(setError("Failed to load articles"));
     }
   };
 }
