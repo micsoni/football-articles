@@ -1,19 +1,15 @@
-import React, { useEffect } from "react";
-import { useDispatch } from "react-redux";
-import { fetchArticles } from "./store/actions/articles";
+import React from "react";
+import { Route, Switch } from "react-router";
+import Homepage from "./pages/Homepage";
 import "./App.css";
 
 function App() {
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(fetchArticles());
-  }, [dispatch]);
-
   return (
-    <div className="App">
-      <p>Hello</p>
-    </div>
+    <React.Fragment>
+      <Switch>
+        <Route exact path="/" component={Homepage} />
+      </Switch>
+    </React.Fragment>
   );
 }
 
