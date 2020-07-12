@@ -1,11 +1,17 @@
 .main {
   text-align: center;
-  padding-top: 3rem;
   margin: 0;
   height: 100%;
 }
 
-.centered {
+.main p:first-child {
+  background-color: #6a00d2;
+  font-size: 24px;
+  padding: 10px;
+  color: white;
+}
+.row {
   align-self: center;
   justify-content: center;
+  padding-top: 10px;
 }

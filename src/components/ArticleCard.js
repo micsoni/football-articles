@@ -3,6 +3,10 @@ import { Card, Button, Col } from "react-bootstrap";
 import "../style/articleCard.css";
 
 function ArticleCard(props) {
+  function truncate(text, limit = 180) {
+    return text.length <= limit ? text : `${text.slice(0, limit)}...`;
+  }
+
   return (
     <Col xl={3} lg={4} md={6}>
       <Card className="article-card">
@@ -12,12 +16,10 @@ function ArticleCard(props) {
           className="pattern-image"
           src={props.urlToImage}
         />
-        <Card.Body>
-          <Card.Title>{props.title}</Card.Title>
-          <Card.Body>
-            <Card.Text className="description">{props.description}</Card.Text>
-          </Card.Body>
-          <Button className="purple-buttom" variant="dark" href={props.url}>
+        <Card.Body className="card-body">
+          <Card.Title className="title">{props.title}</Card.Title>
+          <Card.Text>{truncate(props.description)}</Card.Text>
+          <Button className="cta-button" variant="dark" href={props.url}>
             See complete article
           </Button>
         </Card.Body>

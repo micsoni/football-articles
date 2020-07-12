@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import Loading from "../components/Loading";
-import { Container, Row, CardDeck } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 import { fetchArticles } from "../store/actions/articles";
 import { useDispatch, useSelector } from "react-redux";
 import ArticleCard from "../components/ArticleCard";
@@ -23,13 +23,10 @@ function Homepage() {
 
   return (
     <div className="main">
+      <p>Football Articles</p>
       <Container fluid>
-        <Row className="centered">
-          {!articles.length ? (
-            <Loading />
-          ) : (
-            <CardDeck>{createCards()}</CardDeck>
-          )}
+        <Row className="row">
+          {!articles.length ? <Loading /> : createCards()}
         </Row>
       </Container>
     </div>
