@@ -1,0 +1,19 @@
+.article-card {
+  background-color: #23253e;
+  color: #ffffff;
+  height: 600px;
+  margin: 30px 0px 30px 0px;
+}
+
+.pattern-image {
+  max-height: 200px;
+  object-fit: cover;
+}
+
+.purple-buttom {
+  background-color: #6a00d2;
+}
+
+.card-body {
+  align-items: center;
+}
