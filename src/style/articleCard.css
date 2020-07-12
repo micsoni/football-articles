@@ -1,0 +1,28 @@
+.article-card {
+  background-color: #23253e;
+  color: #ffffff;
+  height: 600px;
+  margin: 30px 0px 30px 0px;
+}
+
+.pattern-image {
+  max-height: 200px;
+  object-fit: cover;
+}
+
+.cta-button {
+  background-color: #6a00d2;
+  margin-top: auto;
+}
+
+.card-body {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 24px;
+  padding-bottom: 10px;
+}
