@@ -3,7 +3,8 @@ import { setError } from "./error";
 
 export const GET_ARTICLES = "GET_ARTICLES";
 
-const articlesUrl = `http://newsapi.org/v2/everything?q=football&from=2020-07-09&sortBy=publishedAt&apiKey=${process.env.REACT_APP_API_KEY}`;
+const api_key = process.env.REACT_APP_API_KEY
+const articlesUrl = `http://newsapi.org/v2/everything?q=football&from=2020-07-09&sortBy=publishedAt&apiKey=${api_key}`;
 
 export function fetchedArticles(request) {
   return {
