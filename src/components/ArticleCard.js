@@ -7,6 +7,9 @@ function ArticleCard(props) {
     return text.length <= limit ? text : `${text.slice(0, limit)}...`;
   }
 
+  const defaultImage =
+    "https://via.placeholder.com/420x200.png/64637B/FFFFFF?text=No%20Image";
+
   return (
     <Col xl={3} lg={4} md={6}>
       <Card className="article-card">
@@ -14,7 +17,7 @@ function ArticleCard(props) {
         <Card.Img
           variant="top"
           className="pattern-image"
-          src={props.urlToImage}
+          src={props.urlToImage || defaultImage}
         />
         <Card.Body className="card-body">
           <Card.Title className="title">{props.title}</Card.Title>
